@@ -1,9 +1,11 @@
+from pathlib import Path
 import h5py
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
 # insert at 1, 0 is the script path (or '' in REPL)
-sys.path.insert(1, './Guassian-Mixture-Models')
+sys.path.insert(1, str(Path(__file__).parent / './Gaussian-Mixture-Models'))
+sys.path.insert(1, str(Path(__file__).parent))
 from GMM_GMR import GMM_GMR
 import douglas_peucker as dp
 from scipy.optimize import minimize
